@@ -19,10 +19,12 @@ public class TestClass
     @Test
     public void TestingForPayRate()
     {
+        //Defualt pay rate 
         PayrollDollars classObj = new PayrollDollars();
         classObj.get_rate();
-        assertEquals(16.75, classObj.get_rate(),.001);
+        assertEquals(16.78, classObj.get_rate(),.001);
 
+        //Custom user input for pay rate
         classObj.set_new_pay_rate(40.75);
         assertEquals(40.75, classObj.get_rate(), .001);
     }
